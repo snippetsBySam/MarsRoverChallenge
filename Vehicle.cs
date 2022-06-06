@@ -28,6 +28,21 @@ namespace MarsRoverChallenge
 
         public void Move(string instructions)
         {
+            foreach (char instruction in instructions)
+            {
+                switch (instruction)
+                {
+                    case 'L':
+                        RotateLeft();
+                        break;
+                    case 'R':
+                        RotateRight();
+                        break;
+                    case 'M':
+                        MoveForward();
+                        break;
+                }
+            }
             Console.WriteLine($"{XPosition} {YPosition} {Heading.ToString()}");
         }
 
@@ -52,12 +67,30 @@ namespace MarsRoverChallenge
 
         public void RotateLeft()
         {
-
+            Console.WriteLine($"Heading Before {Heading.ToString()}");
+            if (Heading == Orientation.N)
+            {
+                Heading = Orientation.W;
+            }
+            else
+            {
+                Heading--;
+            }
+            Console.WriteLine($"Heading after {Heading.ToString()}");
         }
 
         public void RotateRight()
         {
             Console.WriteLine($"Heading Before {Heading.ToString()}");
+            if (Heading == Orientation.W)
+            {
+                Heading = Orientation.N;
+            }
+            else
+            {
+                Heading++;
+            }
+            Console.WriteLine($"Heading after {Heading.ToString()}");
         }
     }
 }

@@ -4,6 +4,11 @@ using MarsRoverChallenge;
 Console.WriteLine("Hello, World!");
 //Request line inputs
 
-Vehicle rover = new Vehicle(1, 2, Orientation.N);
+Vehicle rover1 = new Vehicle(1, 2, Orientation.N);
+rover1.Move("LMLMLMLMM");
 
-rover.Move("LMLMLMLMM");
+Vehicle rover2 = new Vehicle(3, 3, Orientation.E);
+rover2.Move("MMRMMRMRRM");
+//rover.RotateRight();
+//rover.RotateLeft();
+
