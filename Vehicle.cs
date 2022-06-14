@@ -67,7 +67,6 @@ namespace MarsRoverChallenge
 
         public void RotateLeft()
         {
-            Console.WriteLine($"Heading Before {Heading.ToString()}");
             if (Heading == Orientation.N)
             {
                 Heading = Orientation.W;
@@ -76,12 +75,10 @@ namespace MarsRoverChallenge
             {
                 Heading--;
             }
-            Console.WriteLine($"Heading after {Heading.ToString()}");
         }
 
         public void RotateRight()
         {
-            Console.WriteLine($"Heading Before {Heading.ToString()}");
             if (Heading == Orientation.W)
             {
                 Heading = Orientation.N;
@@ -90,7 +87,6 @@ namespace MarsRoverChallenge
             {
                 Heading++;
             }
-            Console.WriteLine($"Heading after {Heading.ToString()}");
         }
     }
 }

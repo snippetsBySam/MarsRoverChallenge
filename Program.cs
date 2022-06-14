@@ -11,4 +11,3 @@ Vehicle rover2 = new Vehicle(3, 3, Orientation.E);
 rover2.Move("MMRMMRMRRM");
 //rover.RotateRight();
 //rover.RotateLeft();
-
